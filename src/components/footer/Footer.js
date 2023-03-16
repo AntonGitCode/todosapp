@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import TasksFilter from './TasksFilter'
+import TasksFilter from '../task-filter'
 
 function Footer({ activeTodoCount, makeFiltered, clearCompleted, statusFilter }) {
   const itemsLeftPostfix = activeTodoCount < 2 ? ' item left' : ' items left'

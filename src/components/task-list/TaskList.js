@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Task from './Task'
+import Task from '../task'
 
 function TaskList({ todos, onDeleted, onToggleDone, statusFilter }) {
   let filteredArray = [...todos]

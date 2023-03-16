@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import TaskList from './Todo/TaskList'
-import NewTaskForm from './Todo/AddTask'
-import Footer from './Todo/Footer'
+import TaskList from '../task-list'
+import NewTaskForm from '../add-task'
+import Footer from '../footer'
 
 export default class App extends Component {
   state = {
