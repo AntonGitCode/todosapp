@@ -32,7 +32,7 @@ export default class NewTaskForm extends Component {
           placeholder="What needs to be done?"
           value={this.state.title}
           autoFocus
-          // required
+          required
           onChange={this.onLabelChange}
         ></input>
         <button type="submit"></button>

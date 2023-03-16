@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 export default class Task extends Component {
   render() {
     const { todo, onDeleted, onToggleDone } = this.props
     const { completed } = todo
 
-    let doneClassName = completed ? 'completed' : 'active'
-    let isChecked = completed ? true : false
+    const taskClassName = classNames({ completed: completed === true })
+    const isChecked = taskClassName
 
     return (
-      <li className={doneClassName}>
+      <li className={taskClassName}>
         <div className="view">
           <input className="toggle" type="checkbox" checked={isChecked} onChange={onToggleDone}></input>
 
