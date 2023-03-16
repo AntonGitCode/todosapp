@@ -6,8 +6,8 @@ import Task from './Task'
 function TaskList({ todos, onDeleted, onToggleDone, statusFilter }) {
   let filteredArray = [...todos]
 
-  if (statusFilter === 'active') filteredArray = todos.filter((el) => el.completed === 'active')
-  if (statusFilter === 'completed') filteredArray = todos.filter((el) => el.completed === 'completed')
+  if (statusFilter === 'active') filteredArray = todos.filter((el) => !el.completed)
+  if (statusFilter === 'completed') filteredArray = todos.filter((el) => el.completed)
 
   const elements = filteredArray.map((todo) => {
     const { id } = todo

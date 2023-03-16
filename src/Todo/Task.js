@@ -7,15 +7,8 @@ export default class Task extends Component {
     const { todo, onDeleted, onToggleDone } = this.props
     const { completed } = todo
 
-    if (completed === 'editing')
-      return (
-        <li className={completed}>
-          <input type="text" className="edit" placeholder={todo.title}></input>
-        </li>
-      )
-
-    let doneClassName = completed === 'completed' ? 'completed' : 'active'
-    let isChecked = completed === 'completed' ? true : false
+    let doneClassName = completed ? 'completed' : 'active'
+    let isChecked = completed ? true : false
 
     return (
       <li className={doneClassName}>

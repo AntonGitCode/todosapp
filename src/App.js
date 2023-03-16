@@ -14,7 +14,7 @@ export default class App extends Component {
     return {
       title,
       id: Date.now(),
-      completed: 'active',
+      completed: false,
     }
   }
 
@@ -41,7 +41,7 @@ export default class App extends Component {
       const idx = todos.findIndex((el) => el.id === id)
       const oldTodo = todos[idx]
       const newTodo =
-        todos[idx].completed === 'active' ? { ...oldTodo, completed: 'completed' } : { ...oldTodo, completed: 'active' }
+        todos[idx].completed === false ? { ...oldTodo, completed: true } : { ...oldTodo, completed: false }
 
       const newArray = [...todos.slice(0, idx), newTodo, ...todos.slice(idx + 1)]
       return { todos: newArray }
@@ -59,14 +59,14 @@ export default class App extends Component {
   clearCompleted = () => {
     this.setState(({ todos }) => {
       return {
-        todos: todos.filter((el) => el.completed !== 'completed'),
+        todos: todos.filter((el) => !el.completed),
       }
     })
   }
 
   render() {
     const { todos, statusFilter } = this.state
-    const activeTodoCount = todos.length - todos.filter((el) => el.completed === 'completed').length
+    const activeTodoCount = todos.length - todos.filter((el) => el.completed).length
 
     return (
       <section className="todoapp">
