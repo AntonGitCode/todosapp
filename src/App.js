@@ -5,8 +5,6 @@ import NewTaskForm from './Todo/AddTask'
 import Footer from './Todo/Footer'
 
 export default class App extends Component {
-  counter = 1
-
   state = {
     todos: [this.createTask(' Active Task 1 ')],
     statusFilter: 'all',

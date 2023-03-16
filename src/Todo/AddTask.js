@@ -6,6 +6,10 @@ export default class NewTaskForm extends Component {
   }
 
   onLabelChange = (e) => {
+    if (e.target.value[0] === ' ') {
+      e.target.value = ''
+      e.target.placeholder = 'Type any symbol - not a space'
+    } else e.target.placeholder = 'What needs to be done?'
     this.setState({
       title: e.target.value,
     })
@@ -28,6 +32,7 @@ export default class NewTaskForm extends Component {
           placeholder="What needs to be done?"
           value={this.state.title}
           autoFocus
+          // required
           onChange={this.onLabelChange}
         ></input>
         <button type="submit"></button>
