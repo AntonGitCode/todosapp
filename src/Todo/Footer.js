@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 
 import TasksFilter from './TasksFilter'
 
-function Footer({ activeTodoCount, makeFiltered, clearCompleted }) {
+function Footer({ activeTodoCount, makeFiltered, clearCompleted, statusFilter }) {
   const itemsLeftPostfix = activeTodoCount < 2 ? ' item left' : ' items left'
   return (
     <footer className="footer">
       <span className="todo-count">{activeTodoCount + itemsLeftPostfix}</span>
-      {<TasksFilter makeFiltered={makeFiltered} />}
+      {<TasksFilter makeFiltered={makeFiltered} statusFilter={statusFilter} />}
       <button className="clear-completed" onClick={clearCompleted}>
         Clear Completed
       </button>

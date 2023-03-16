@@ -131,10 +131,6 @@ body {
   box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
 }
 
-input:focus:invalid {
-  background: rgba(7, 231, 212, 0);
-}
-
 .main {
   position: relative;
   z-index: 2;
@@ -373,6 +369,7 @@ input:focus:invalid {
 
 .filters li button.selected {
   border-color: rgba(175, 47, 47, 0.2);
+  font-weight: 800;
 }
 
 .clear-completed,

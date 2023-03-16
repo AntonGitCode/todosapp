@@ -1,17 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function TasksFilter({ makeFiltered }) {
+function TasksFilter({ makeFiltered, statusFilter }) {
   return (
     <ul className="filters">
       <li>
-        <button onClick={() => makeFiltered('all')}>All</button>
+        <button onClick={() => makeFiltered('all')} className={statusFilter === 'all' ? 'selected' : ''}>
+          All
+        </button>
       </li>
       <li>
-        <button onClick={() => makeFiltered('active')}>Active</button>
+        <button onClick={() => makeFiltered('active')} className={statusFilter === 'active' ? 'selected' : ''}>
+          Active
+        </button>
       </li>
       <li>
-        <button onClick={() => makeFiltered('completed')}>Completed</button>
+        <button onClick={() => makeFiltered('completed')} className={statusFilter === 'completed' ? 'selected' : ''}>
+          Completed
+        </button>
       </li>
     </ul>
   )

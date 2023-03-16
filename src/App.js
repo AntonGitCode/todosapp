@@ -90,6 +90,7 @@ export default class App extends Component {
               activeTodoCount={activeTodoCount}
               makeFiltered={this.makeFiltered}
               clearCompleted={this.clearCompleted}
+              statusFilter={statusFilter}
             />
           }
         </section>
