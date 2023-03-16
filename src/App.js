@@ -13,7 +13,7 @@ export default class App extends Component {
   createTask(title) {
     return {
       title,
-      id: Date.now(),
+      createDate: Date.now(),
       completed: false,
     }
   }
@@ -26,9 +26,9 @@ export default class App extends Component {
     })
   }
 
-  deleteTodo = (id) => {
+  deleteTodo = (createDate) => {
     this.setState(({ todos }) => {
-      const idx = todos.findIndex((el) => el.id === id)
+      const idx = todos.findIndex((el) => el.createDate === createDate)
       const newArray = [...todos.slice(0, idx), ...todos.slice(idx + 1)]
       return {
         todos: newArray,
@@ -36,9 +36,9 @@ export default class App extends Component {
     })
   }
 
-  onToggleDone = (id) => {
+  onToggleDone = (createDate) => {
     this.setState(({ todos }) => {
-      const idx = todos.findIndex((el) => el.id === id)
+      const idx = todos.findIndex((el) => el.createDate === createDate)
       const oldTodo = todos[idx]
       const newTodo =
         todos[idx].completed === false ? { ...oldTodo, completed: true } : { ...oldTodo, completed: false }
@@ -83,7 +83,7 @@ export default class App extends Component {
               statusFilter={statusFilter}
             />
           ) : (
-            <p className="list-is-empty">List is empty.Type above to add task</p>
+            <p className="list-is-empty">List is empty - type above to add a task</p>
           )}
           {
             <Footer

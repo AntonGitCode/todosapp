@@ -18,7 +18,7 @@ export default class Task extends Component {
 
           <label>
             <span className="description">{todo.title}</span>
-            <span className="created">{formatDistanceToNow(todo.id)}</span>
+            <span className="created">{formatDistanceToNow(todo.createDate)}</span>
           </label>
 
           <button className="icon icon-edit" />

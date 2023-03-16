@@ -8,7 +8,7 @@ export default class NewTaskForm extends Component {
   onLabelChange = (e) => {
     if (e.target.value[0] === ' ') {
       e.target.value = ''
-      e.target.placeholder = 'Type any symbol - not a space'
+      e.target.placeholder = 'Type any symbol — not a space'
     } else e.target.placeholder = 'What needs to be done?'
     this.setState({
       title: e.target.value,

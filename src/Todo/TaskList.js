@@ -9,10 +9,16 @@ function TaskList({ todos, onDeleted, onToggleDone, statusFilter }) {
   if (statusFilter === 'active') filteredArray = todos.filter((el) => !el.completed)
   if (statusFilter === 'completed') filteredArray = todos.filter((el) => el.completed)
 
-  const elements = filteredArray.map((todo) => {
-    const { id } = todo
-
-    return <Task todo={todo} onDeleted={() => onDeleted(id)} key={id} onToggleDone={() => onToggleDone(id)} />
+  const elements = filteredArray.map((todo, index) => {
+    const { createDate } = todo
+    return (
+      <Task
+        todo={todo}
+        onDeleted={() => onDeleted(createDate)}
+        key={index}
+        onToggleDone={() => onToggleDone(createDate)}
+      />
+    )
   })
 
   return <ul className="todo-list">{elements}</ul>
