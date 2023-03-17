@@ -1,12 +1,4 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-*/
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -26,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 
 button {
   margin: 0;
@@ -67,7 +60,7 @@ body {
 .hidden {
   display: none;
 }
-
+/* 
 .todoapp {
   background: #fff;
   margin: 130px 0 40px 0;
@@ -104,9 +97,9 @@ body {
   -webkit-text-rendering: optimizeLegibility;
   -moz-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
-}
+} */
 
-.new-todo,
+/* .new-todo,
 .edit {
   position: relative;
   margin: 0;
@@ -129,13 +122,13 @@ body {
   border: none;
   background: rgba(0, 0, 0, 0.003);
   box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
-}
+} */
 
-.main {
+/* .main {
   position: relative;
   z-index: 2;
   border-top: 1px solid #e6e6e6;
-}
+} */
 
 .toggle-all {
   width: 1px;
@@ -169,13 +162,13 @@ body {
   color: #737373;
 }
 
-.todo-list {
+/* .todo-list {
   margin: 0;
   padding: 0;
   list-style: none;
-}
+} */
 
-.todo-list li {
+/* .todo-list li {
   position: relative;
   font-size: 24px;
   border-bottom: 1px solid #ededed;
@@ -203,15 +196,15 @@ body {
 
 .todo-list li .toggle {
   text-align: center;
-  width: 40px;
+  width: 40px; */
   /* auto, since non-WebKit browsers doesn't support input styling */
-  height: auto;
+  /* height: auto;
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto 0;
   border: none; /* Mobile Safari */
-  -webkit-appearance: none;
+  /* -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 }
@@ -220,12 +213,12 @@ body {
   opacity: 0;
 }
 
-.todo-list li .toggle + label {
+.todo-list li .toggle + label { */ 
   /*
 		Firefox requires `#` to be escaped - https://bugzilla.mozilla.org/show_bug.cgi?id=922433
 		IE and Edge requires *everything* to be escaped to render, so we do that instead of just the `#` - https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7157459/
 	*/
-  background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
+  /* background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: center left;
 }
@@ -245,9 +238,9 @@ body {
 .todo-list li label .created {
   font-size: 13px;
   color: gray;
-}
+} */
 
-.todo-list li label .description {
+/* .todo-list li label .description {
   word-break: break-all;
   display: block;
   line-height: 1.2;
@@ -301,9 +294,9 @@ body {
 
 .todo-list li.editing:last-child {
   margin-bottom: -1px;
-}
+} */
 
-.footer {
+/* .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -326,17 +319,17 @@ body {
   overflow: hidden;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2),
     0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
-}
+} */
 
-.todo-count {
+/* .todo-count {
   text-align: left;
 }
 
 .todo-count strong {
   font-weight: 300;
-}
+} */
 
-.filters {
+/* .filters {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -370,8 +363,8 @@ body {
 .filters li button.selected {
   border-color: rgba(175, 47, 47, 0.2);
   font-weight: 800;
-}
-
+} */
+/* 
 .clear-completed,
 html .clear-completed:active {
   position: relative;
@@ -382,7 +375,7 @@ html .clear-completed:active {
 
 .clear-completed:hover {
   text-decoration: underline;
-}
+} */
 
 .info {
   margin: 65px auto 0;

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './TasksFilter.css'
 
 function TasksFilter({ makeFiltered, statusFilter }) {
   return (

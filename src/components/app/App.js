@@ -4,6 +4,8 @@ import TaskList from '../task-list'
 import NewTaskForm from '../add-task'
 import Footer from '../footer'
 
+import './App.css'
+
 export default class App extends Component {
   state = {
     todos: [this.createTask(' Active Task 1 ')],

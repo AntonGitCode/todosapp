@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './AddTask.css'
+
 export default class NewTaskForm extends Component {
   state = {
     title: '',
