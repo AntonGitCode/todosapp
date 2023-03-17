@@ -125,3 +125,14 @@
   font-size: 13px;
   color: gray;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .toggle-all,
+  .todo-list li .toggle {
+    background: none;
+  }
+  
+  .todo-list li .toggle {
+    height: 40px;
+  }
+}
