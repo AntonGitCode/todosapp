@@ -37,7 +37,6 @@ export default class NewTaskForm extends Component {
           required
           onChange={this.onLabelChange}
         ></input>
-        <button type="submit"></button>
       </form>
     )
   }
