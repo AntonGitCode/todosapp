@@ -9,11 +9,10 @@ export default class Task extends Component {
     const { todo, onDeleted, onToggleDone } = this.props
     const { completed } = todo
 
-    const taskClassName = classNames({ completed: completed === true })
-    const isChecked = taskClassName
+    const isChecked = classNames({ completed: completed === true })
 
     return (
-      <li className={taskClassName}>
+      <li className={isChecked}>
         <div className="view">
           <input className="toggle" type="checkbox" checked={isChecked} onChange={onToggleDone} />
 
