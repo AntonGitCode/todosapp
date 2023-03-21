@@ -8,21 +8,20 @@ export default class Task extends Component {
   render() {
     const { todo, onDeleted, onToggleDone } = this.props
     const { completed } = todo
-
-    const isChecked = classNames({ completed: completed === true })
-
     return (
-      <li className={isChecked}>
+      <li className={classNames({ completed: completed === true })}>
         <div className="view">
-          <input className="toggle" type="checkbox" checked={isChecked} onChange={onToggleDone} />
-
+          <input
+            className="toggle"
+            type="checkbox"
+            checked={classNames({ completed: completed === true })}
+            onChange={onToggleDone}
+          />
           <label>
             <span className="description">{todo.title}</span>
             <span className="created">{formatDistanceToNow(todo.createDate)}</span>
           </label>
-
           <button className="icon icon-edit" />
-
           <button className="icon icon-destroy" onClick={onDeleted} />
         </div>
       </li>
