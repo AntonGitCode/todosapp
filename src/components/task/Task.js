@@ -36,6 +36,7 @@ Task.propTypes = {
 }
 
 Task.defaultProps = {
+  todo: {},
   onDeleted: () => {},
   onToggleDone: () => {},
 }

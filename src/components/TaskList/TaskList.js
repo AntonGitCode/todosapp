@@ -33,6 +33,7 @@ TaskList.propTypes = {
 }
 
 TaskList.defaultProps = {
+  todos: [],
   statusFilter: 'all',
   onDeleted: () => {},
   onToggleDone: () => {},
