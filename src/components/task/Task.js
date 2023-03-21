@@ -11,7 +11,7 @@ export default class Task extends Component {
     return (
       <li className={classNames({ completed })}>
         <div className="view">
-          <input className="toggle" type="checkbox" checked={classNames({ completed })} onChange={onToggleDone} />
+          <input className="toggle" type="checkbox" checked={completed} onChange={onToggleDone} />
           <label>
             <span className="description">{todo.title}</span>
             <span className="created">{formatDistanceToNow(todo.createDate)}</span>
