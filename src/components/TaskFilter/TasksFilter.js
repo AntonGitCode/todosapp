@@ -26,6 +26,11 @@ function TasksFilter({ makeFiltered, statusFilter }) {
 
 TasksFilter.propTypes = {
   makeFiltered: PropTypes.func.isRequired,
+  statusFilter: PropTypes.string.isRequired,
+}
+
+TasksFilter.defaultProps = {
+  statusFilter: 'all',
 }
 
 export default TasksFilter

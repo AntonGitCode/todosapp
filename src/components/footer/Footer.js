@@ -21,6 +21,11 @@ Footer.propTypes = {
   activeTodoCount: PropTypes.number.isRequired,
   makeFiltered: PropTypes.func.isRequired,
   clearCompleted: PropTypes.func.isRequired,
+  statusFilter: PropTypes.string.isRequired,
 }
 
+Footer.defaultProps = {
+  activeTodoCount: 0,
+  statusFilter: 'all',
+}
 export default Footer

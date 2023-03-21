@@ -10,13 +10,13 @@ function TaskList({ todos, onDeleted, onToggleDone, statusFilter }) {
   if (statusFilter === 'active') filteredArray = todos.filter((el) => !el.completed)
   if (statusFilter === 'completed') filteredArray = todos.filter((el) => el.completed)
 
-  const elements = filteredArray.map((todo, index) => {
-    const { createDate } = todo
+  const elements = filteredArray.map((todo) => {
+    const { createDate, id } = todo
     return (
       <Task
         todo={todo}
         onDeleted={() => onDeleted(createDate)}
-        key={index}
+        key={id}
         onToggleDone={() => onToggleDone(createDate)}
       />
     )
@@ -30,6 +30,10 @@ TaskList.propTypes = {
   onDeleted: PropTypes.func.isRequired,
   onToggleDone: PropTypes.func.isRequired,
   statusFilter: PropTypes.string,
+}
+
+TaskList.defaultProps = {
+  statusFilter: 'all',
 }
 
 export default TaskList

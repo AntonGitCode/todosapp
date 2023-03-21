@@ -7,6 +7,8 @@ import Footer from '../Footer'
 import './App.css'
 
 export default class App extends Component {
+  counter = 1
+
   state = {
     todos: [this.createTask(' Active Task 1 ')],
     statusFilter: 'all',
@@ -14,6 +16,7 @@ export default class App extends Component {
 
   createTask(title) {
     return {
+      id: this.counter++,
       title,
       createDate: Date.now(),
       completed: false,
