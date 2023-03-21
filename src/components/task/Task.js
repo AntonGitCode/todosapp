@@ -35,3 +35,8 @@ Task.propTypes = {
   onDeleted: PropTypes.func.isRequired,
   onToggleDone: PropTypes.func.isRequired,
 }
+
+Task.defaultProps = {
+  onDeleted: () => {},
+  onToggleDone: () => {},
+}

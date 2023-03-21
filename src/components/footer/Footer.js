@@ -25,6 +25,8 @@ Footer.propTypes = {
 }
 
 Footer.defaultProps = {
+  makeFiltered: () => {},
+  clearCompleted: () => {},
   activeTodoCount: 0,
   statusFilter: 'all',
 }

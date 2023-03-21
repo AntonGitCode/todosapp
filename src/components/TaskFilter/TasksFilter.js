@@ -30,6 +30,7 @@ TasksFilter.propTypes = {
 }
 
 TasksFilter.defaultProps = {
+  makeFiltered: () => {},
   statusFilter: 'all',
 }
 
