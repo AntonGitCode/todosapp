@@ -30,7 +30,7 @@ export default class App extends Component {
 
     const newArr = [...todos.slice(0, idx), newTodo, ...todos.slice(idx + 1)]
 
-    // если Таймер Не запускался (нет его) или стоит на паузе
+    //  если Таймер Не запускался (нет его) или стоит на паузе
     // то здесь можно сохранить только минуты и секунды, и выйти
     // ? ОБНОВЛЯЕМ СТЕЙТ то есть setState и return
 
