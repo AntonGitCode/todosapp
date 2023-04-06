@@ -4,20 +4,22 @@ import PropTypes from 'prop-types'
 import Task from '../Task'
 import './TaskList.css'
 
-function TaskList({ todos, onDeleted, onToggleDone, statusFilter }) {
+function TaskList({ todos, onDeleted, onToggleDone, statusFilter, saveTimer }) {
   let filteredArray = [...todos]
 
   if (statusFilter === 'active') filteredArray = todos.filter((el) => !el.completed)
   if (statusFilter === 'completed') filteredArray = todos.filter((el) => el.completed)
 
   const elements = filteredArray.map((todo) => {
-    const { createDate, id } = todo
+    const { id } = todo
     return (
       <Task
         todo={todo}
-        onDeleted={() => onDeleted(createDate)}
+        onDeleted={() => onDeleted(id)}
         key={id}
-        onToggleDone={() => onToggleDone(createDate)}
+        onToggleDone={() => onToggleDone(id)}
+        saveTimer={saveTimer}
+        id={id}
       />
     )
   })
