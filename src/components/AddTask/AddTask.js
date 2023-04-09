@@ -63,17 +63,15 @@ export default class NewTaskForm extends Component {
         <input
           type="text"
           className="new-todo-form__timer"
-          // defaultValue={''}
           value={this.state.minutes}
           onChange={this.onMinutesChange}
           placeholder="Min"
           ref={(input) => {
             this.inputMin = input
           }}
-          required
         />
         <input
-          type="text"
+          type="number"
           className="new-todo-form__timer"
           value={this.state.seconds}
           onChange={this.onSecondsChange}

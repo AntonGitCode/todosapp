@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Task from '../Task'
 import './TaskList.css'
 
-function TaskList({ todos, onDeleted, onToggleDone, statusFilter, saveTimer }) {
+function TaskList({ todos, onDeleted, onToggleDone, statusFilter, saveTimer, updateIsRunning }) {
   let filteredArray = [...todos]
 
   if (statusFilter === 'active') filteredArray = todos.filter((el) => !el.completed)
@@ -15,10 +15,11 @@ function TaskList({ todos, onDeleted, onToggleDone, statusFilter, saveTimer }) {
     return (
       <Task
         todo={todo}
-        onDeleted={() => onDeleted(id)}
+        onDeleted={onDeleted}
         key={id}
-        onToggleDone={() => onToggleDone(id)}
+        onToggleDone={onToggleDone}
         saveTimer={saveTimer}
+        updateIsRunning={updateIsRunning}
         id={id}
       />
     )
@@ -32,6 +33,8 @@ TaskList.propTypes = {
   onDeleted: PropTypes.func.isRequired,
   onToggleDone: PropTypes.func.isRequired,
   statusFilter: PropTypes.string,
+  saveTimer: PropTypes.func.isRequired,
+  updateIsRunning: PropTypes.func.isRequired,
 }
 
 TaskList.defaultProps = {
@@ -39,6 +42,8 @@ TaskList.defaultProps = {
   statusFilter: 'all',
   onDeleted: () => {},
   onToggleDone: () => {},
+  saveTimer: () => {},
+  updateIsRunning: () => {},
 }
 
 export default TaskList
